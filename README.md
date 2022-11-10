@@ -78,3 +78,9 @@ PS1 = 4 => PR2 = 250   V
 PS1 = 16 => PR2 = 62,5   V
 
 -----
+
+# Display LCD
+
+Apresenta caracteres tabela ASCI no display.
+
+<img src="Exemplo_LCD_C.X/img_hardware.PNG" alt="proteus" width="500px">
