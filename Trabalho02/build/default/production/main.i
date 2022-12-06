@@ -5889,49 +5889,6 @@ extern int printf(const char *, ...);
 # 60 "main.c" 2
 
 
-# 1 "P:\\Microchip\\pic\\include\\c90\\time.h" 1 3
-
-
-
-# 1 "P:\\Microchip\\pic\\include\\__unsupported.h" 1 3
-# 4 "P:\\Microchip\\pic\\include\\c90\\time.h" 2 3
-
-
-
-
-typedef long time_t;
-struct tm {
- int tm_sec;
- int tm_min;
- int tm_hour;
- int tm_mday;
- int tm_mon;
- int tm_year;
- int tm_wday;
- int tm_yday;
- int tm_isdst;
-};
-
-
-
-
-
-extern int time_zone;
-
-
-
-
-extern time_t time(time_t *);
-extern int stime(time_t *);
-# 47 "P:\\Microchip\\pic\\include\\c90\\time.h" 3
-extern char * asctime(const struct tm *) ;
-extern char * ctime(const time_t *) ;
-extern struct tm * gmtime(const time_t *) ;
-extern struct tm * localtime(const time_t *) ;
-extern size_t strftime(char *, size_t, const char *, const struct tm *) ;
-extern time_t mktime(struct tm *);
-# 62 "main.c" 2
-
 
 
 void putch(char data) {
@@ -5939,28 +5896,39 @@ void putch(char data) {
 }
 
 void main(void) {
-    long int counter = 0;
+    PORTB = 00;
+    TRISB = 0x01;
+
+    PORTC = 0;
+    TRISC = 0x00;
+
     PORTD = 0;
     TRISD = 0x00;
-
-    PORTBbits.RB0 = 0x00;
-    TRISB = 0x01;
 
     inicializa_lcd();
     limpa_lcd();
 
-    printf("Aperte para iniciar");
+    caracter_inicio(1,3);
+    printf("Aperte para");
+    caracter_inicio(2,3);
+    printf("iniciar!!!");
     while(1) {
         int start_reset = 0;
+        int pressedJ1 = 0;
+        int pressedJ2 = 0;
+        long int timeJ1 = 0;
+        long int timeJ2 = 0;
+        long int counter = 0;
 
-        if(PORTBbits.RB0 == 0x01 && start_reset == 0){
+        if(PORTBbits.RB0 == 0x01){
+            PORTCbits.RC0 = 1;
+            _delay((unsigned long)((500)*(4000000/4000.0)));
+            PORTCbits.RC0 = 0;
+
             limpa_lcd();
             printf("Rodando...");
+
             start_reset = 1;
-        } else if (PORTBbits.RB0 == 0x01 && start_reset == 1) {
-            limpa_lcd();
-            printf("Reiniciando...");
-            start_reset = 0;
         }
 
         while(start_reset) {
@@ -5968,19 +5936,52 @@ void main(void) {
             counter++;
 
             if(PORTBbits.RB1 == 0x01){
-                limpa_lcd();
-                printf("Tempo 1: %ldms", counter);
-                counter = 0;
-                break;
+                pressedJ1 = 1;
+                timeJ1 = counter;
+
+                PORTCbits.RC1 = 1;
             }
 
             if(PORTBbits.RB2 == 0x01){
+                pressedJ2 = 1;
+                timeJ2 = counter;
+
+                PORTCbits.RC2 = 1;
+            }
+
+            if(pressedJ1 == 1 && pressedJ2 == 1){
                 limpa_lcd();
-                printf("Tempo 2: %ldms", counter);
-                counter = 0;
+                caracter_inicio(1,1);
+                printf("Tempo 1: %ldms", timeJ1);
+                caracter_inicio(2,1);
+                printf("Tempo 2: %ldms", timeJ2);
+
+                while(1) {
+                    if(PORTBbits.RB0 == 0x01){
+
+                        PORTCbits.RC0 = 0;
+                        PORTCbits.RC1 = 0;
+                        PORTCbits.RC2 = 0;
+
+                        limpa_lcd();
+                        printf("Reiniciando...");
+                        _delay((unsigned long)((1000)*(4000000/4000.0)));
+                        limpa_lcd();
+
+                        start_reset = 0;
+
+                        caracter_inicio(1,1);
+                        printf("Aperte para");
+                        caracter_inicio(2,1);
+                        printf("iniciar!!!");
+
+                        break;
+                    }
+                }
                 break;
             }
         }
+
 
     }
 }

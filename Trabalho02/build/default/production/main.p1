@@ -4,13 +4,36 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./lcd.h: 20:  __attribute__((inline)) void escreve_lcd(char c);
 [v _escreve_lcd `TF3057 ~T0 @X0 0 e ]
 [p mainexit ]
-"2706 P:\Microchip\pic\include\proc\pic18f4550.h
+"2454 P:\Microchip\pic\include\proc\pic18f4550.h
+[; ;P:\Microchip\pic\include\proc\pic18f4550.h: 2454: extern volatile unsigned char PORTB __attribute__((address(0xF81)));
+[v _PORTB `Vuc ~T0 @X0 0 e@3969 ]
+"3626
+[; ;P:\Microchip\pic\include\proc\pic18f4550.h: 3626: extern volatile unsigned char TRISB __attribute__((address(0xF93)));
+[v _TRISB `Vuc ~T0 @X0 0 e@3987 ]
+"2564
+[; ;P:\Microchip\pic\include\proc\pic18f4550.h: 2564: extern volatile unsigned char PORTC __attribute__((address(0xF82)));
+[v _PORTC `Vuc ~T0 @X0 0 e@3970 ]
+"3848
+[; ;P:\Microchip\pic\include\proc\pic18f4550.h: 3848: extern volatile unsigned char TRISC __attribute__((address(0xF94)));
+[v _TRISC `Vuc ~T0 @X0 0 e@3988 ]
+"2706
 [; ;P:\Microchip\pic\include\proc\pic18f4550.h: 2706: extern volatile unsigned char PORTD __attribute__((address(0xF83)));
 [v _PORTD `Vuc ~T0 @X0 0 e@3971 ]
 "4002
 [; ;P:\Microchip\pic\include\proc\pic18f4550.h: 4002: extern volatile unsigned char TRISD __attribute__((address(0xF95)));
 [v _TRISD `Vuc ~T0 @X0 0 e@3989 ]
-"2460
+"22 ./lcd.h
+[; ;./lcd.h: 22:  void inicializa_lcd(void);
+[v _inicializa_lcd `(v ~T0 @X0 0 ef ]
+"21
+[; ;./lcd.h: 21:  void limpa_lcd(void);
+[v _limpa_lcd `(v ~T0 @X0 0 ef ]
+"23
+[; ;./lcd.h: 23:  void caracter_inicio(char linha,char coluna);
+[v _caracter_inicio `(v ~T0 @X0 0 ef2`uc`uc ]
+"195 P:\Microchip\pic\include\c90\stdio.h
+[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
+"2460 P:\Microchip\pic\include\proc\pic18f4550.h
 [; ;P:\Microchip\pic\include\proc\pic18f4550.h: 2460:     struct {
 [s S102 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S102 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
@@ -29,17 +52,33 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2484
 [; ;P:\Microchip\pic\include\proc\pic18f4550.h: 2484: extern volatile PORTBbits_t PORTBbits __attribute__((address(0xF81)));
 [v _PORTBbits `VS101 ~T0 @X0 0 e@3969 ]
-"3626
-[; ;P:\Microchip\pic\include\proc\pic18f4550.h: 3626: extern volatile unsigned char TRISB __attribute__((address(0xF93)));
-[v _TRISB `Vuc ~T0 @X0 0 e@3987 ]
-"22 ./lcd.h
-[; ;./lcd.h: 22:  void inicializa_lcd(void);
-[v _inicializa_lcd `(v ~T0 @X0 0 ef ]
-"21
-[; ;./lcd.h: 21:  void limpa_lcd(void);
-[v _limpa_lcd `(v ~T0 @X0 0 ef ]
-"195 P:\Microchip\pic\include\c90\stdio.h
-[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
+"2570
+[; ;P:\Microchip\pic\include\proc\pic18f4550.h: 2570:     struct {
+[s S106 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S106 . RC0 RC1 RC2 . RC4 RC5 RC6 RC7 ]
+"2580
+[; ;P:\Microchip\pic\include\proc\pic18f4550.h: 2580:     struct {
+[s S107 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S107 . T1OSO T1OSI CCP1 . TX RX ]
+"2588
+[; ;P:\Microchip\pic\include\proc\pic18f4550.h: 2588:     struct {
+[s S108 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S108 . T13CKI . P1A . CK DT ]
+"2596
+[; ;P:\Microchip\pic\include\proc\pic18f4550.h: 2596:     struct {
+[s S109 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S109 . . CCP2 PA1 ]
+"2601
+[; ;P:\Microchip\pic\include\proc\pic18f4550.h: 2601:     struct {
+[s S110 :1 `uc 1 :1 `uc 1 ]
+[n S110 . . PA2 ]
+"2569
+[; ;P:\Microchip\pic\include\proc\pic18f4550.h: 2569: typedef union {
+[u S105 `S106 1 `S107 1 `S108 1 `S109 1 `S110 1 ]
+[n S105 . . . . . . ]
+"2606
+[; ;P:\Microchip\pic\include\proc\pic18f4550.h: 2606: extern volatile PORTCbits_t PORTCbits __attribute__((address(0xF82)));
+[v _PORTCbits `VS105 ~T0 @X0 0 e@3970 ]
 [v F42 `(v ~T0 @X0 1 tf1`ul ]
 "12 P:\Microchip\pic\include\builtins.h
 [v __delay `JF42 ~T0 @X0 0 e ]
@@ -624,166 +663,269 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8894
 [; ;P:\Microchip\pic\include\proc\pic18f4550.h: 8894: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"65 main.c
-[; ;main.c: 65: void putch(char data) {
+"64 main.c
+[; ;main.c: 64: void putch(char data) {
 [v _putch `(v ~T0 @X0 1 ef1`uc ]
 {
 [e :U _putch ]
 [v _data `uc ~T0 @X0 1 r1 ]
 [f ]
-"66
-[; ;main.c: 66:   escreve_lcd(data);
+"65
+[; ;main.c: 65:   escreve_lcd(data);
 [e ( _escreve_lcd (1 _data ]
-"67
-[; ;main.c: 67: }
-[e :UE 364 ]
+"66
+[; ;main.c: 66: }
+[e :UE 363 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"69
-[; ;main.c: 69: void main(void) {
+"68
+[; ;main.c: 68: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
+"69
+[; ;main.c: 69:     PORTB = 00;
+[e = _PORTB -> -> 0 `i `uc ]
 "70
-[; ;main.c: 70:     long int counter = 0;
-[v _counter `l ~T0 @X0 1 a ]
-[e = _counter -> -> 0 `i `l ]
-"71
-[; ;main.c: 71:     PORTD = 0;
-[e = _PORTD -> -> 0 `i `uc ]
-"72
-[; ;main.c: 72:     TRISD = 0x00;
-[e = _TRISD -> -> 0 `i `uc ]
-"74
-[; ;main.c: 74:     PORTBbits.RB0 = 0x00;
-[e = . . _PORTBbits 0 0 -> -> 0 `i `uc ]
-"75
-[; ;main.c: 75:     TRISB = 0x01;
+[; ;main.c: 70:     TRISB = 0x01;
 [e = _TRISB -> -> 1 `i `uc ]
-"77
-[; ;main.c: 77:     inicializa_lcd();
-[e ( _inicializa_lcd ..  ]
+"72
+[; ;main.c: 72:     PORTC = 0;
+[e = _PORTC -> -> 0 `i `uc ]
+"73
+[; ;main.c: 73:     TRISC = 0x00;
+[e = _TRISC -> -> 0 `i `uc ]
+"75
+[; ;main.c: 75:     PORTD = 0;
+[e = _PORTD -> -> 0 `i `uc ]
+"76
+[; ;main.c: 76:     TRISD = 0x00;
+[e = _TRISD -> -> 0 `i `uc ]
 "78
-[; ;main.c: 78:     limpa_lcd();
+[; ;main.c: 78:     inicializa_lcd();
+[e ( _inicializa_lcd ..  ]
+"79
+[; ;main.c: 79:     limpa_lcd();
 [e ( _limpa_lcd ..  ]
-"80
-[; ;main.c: 80:     printf("Aperte para iniciar");
-[e ( _printf :s 1C ]
 "81
-[; ;main.c: 81:     while(1) {
-[e :U 367 ]
-{
+[; ;main.c: 81:     caracter_inicio(1,3);
+[e ( _caracter_inicio (2 , -> -> 1 `i `uc -> -> 3 `i `uc ]
 "82
-[; ;main.c: 82:         int start_reset = 0;
+[; ;main.c: 82:     printf("Aperte para");
+[e ( _printf :s 1C ]
+"83
+[; ;main.c: 83:     caracter_inicio(2,3);
+[e ( _caracter_inicio (2 , -> -> 2 `i `uc -> -> 3 `i `uc ]
+"84
+[; ;main.c: 84:     printf("iniciar!!!");
+[e ( _printf :s 2C ]
+"85
+[; ;main.c: 85:     while(1) {
+[e :U 366 ]
+{
+"86
+[; ;main.c: 86:         int start_reset = 0;
 [v _start_reset `i ~T0 @X0 1 a ]
 [e = _start_reset -> 0 `i ]
-"84
-[; ;main.c: 84:         if(PORTBbits.RB0 == 0x01 && start_reset == 0){
-[e $ ! && == -> . . _PORTBbits 0 0 `i -> 1 `i == _start_reset -> 0 `i 369  ]
-{
-"85
-[; ;main.c: 85:             limpa_lcd();
-[e ( _limpa_lcd ..  ]
-"86
-[; ;main.c: 86:             printf("Rodando...");
-[e ( _printf :s 2C ]
 "87
-[; ;main.c: 87:             start_reset = 1;
-[e = _start_reset -> 1 `i ]
+[; ;main.c: 87:         int pressedJ1 = 0;
+[v _pressedJ1 `i ~T0 @X0 1 a ]
+[e = _pressedJ1 -> 0 `i ]
 "88
-[; ;main.c: 88:         } else if (PORTBbits.RB0 == 0x01 && start_reset == 1) {
-}
-[e $U 370  ]
-[e :U 369 ]
-[e $ ! && == -> . . _PORTBbits 0 0 `i -> 1 `i == _start_reset -> 1 `i 371  ]
-{
+[; ;main.c: 88:         int pressedJ2 = 0;
+[v _pressedJ2 `i ~T0 @X0 1 a ]
+[e = _pressedJ2 -> 0 `i ]
 "89
-[; ;main.c: 89:             limpa_lcd();
-[e ( _limpa_lcd ..  ]
+[; ;main.c: 89:         long int timeJ1 = 0;
+[v _timeJ1 `l ~T0 @X0 1 a ]
+[e = _timeJ1 -> -> 0 `i `l ]
 "90
-[; ;main.c: 90:             printf("Reiniciando...");
-[e ( _printf :s 3C ]
+[; ;main.c: 90:         long int timeJ2 = 0;
+[v _timeJ2 `l ~T0 @X0 1 a ]
+[e = _timeJ2 -> -> 0 `i `l ]
 "91
-[; ;main.c: 91:             start_reset = 0;
-[e = _start_reset -> 0 `i ]
-"92
-[; ;main.c: 92:         }
-}
-[e :U 371 ]
-[e :U 370 ]
+[; ;main.c: 91:         long int counter = 0;
+[v _counter `l ~T0 @X0 1 a ]
+[e = _counter -> -> 0 `i `l ]
+"93
+[; ;main.c: 93:         if(PORTBbits.RB0 == 0x01){
+[e $ ! == -> . . _PORTBbits 0 0 `i -> 1 `i 368  ]
+{
 "94
-[; ;main.c: 94:         while(start_reset) {
-[e $U 372  ]
-[e :U 373 ]
-{
+[; ;main.c: 94:             PORTCbits.RC0 = 1;
+[e = . . _PORTCbits 0 0 -> -> 1 `i `uc ]
 "95
-[; ;main.c: 95:             _delay((unsigned long)((1)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 95:             _delay((unsigned long)((500)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "96
-[; ;main.c: 96:             counter++;
-[e ++ _counter -> -> 1 `i `l ]
+[; ;main.c: 96:             PORTCbits.RC0 = 0;
+[e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
 "98
-[; ;main.c: 98:             if(PORTBbits.RB1 == 0x01){
-[e $ ! == -> . . _PORTBbits 0 1 `i -> 1 `i 375  ]
-{
+[; ;main.c: 98:             limpa_lcd();
+[e ( _limpa_lcd ..  ]
 "99
-[; ;main.c: 99:                 limpa_lcd();
-[e ( _limpa_lcd ..  ]
-"100
-[; ;main.c: 100:                 printf("Tempo 1: %ldms", counter);
-[e ( _printf , (. :s 4C _counter ]
+[; ;main.c: 99:             printf("Rodando...");
+[e ( _printf :s 3C ]
 "101
-[; ;main.c: 101:                 counter = 0;
-[e = _counter -> -> 0 `i `l ]
+[; ;main.c: 101:             start_reset = 1;
+[e = _start_reset -> 1 `i ]
 "102
-[; ;main.c: 102:                 break;
-[e $U 374  ]
-"103
-[; ;main.c: 103:             }
+[; ;main.c: 102:         }
 }
-[e :U 375 ]
-"105
-[; ;main.c: 105:             if(PORTBbits.RB2 == 0x01){
-[e $ ! == -> . . _PORTBbits 0 2 `i -> 1 `i 376  ]
+[e :U 368 ]
+"104
+[; ;main.c: 104:         while(start_reset) {
+[e $U 369  ]
+[e :U 370 ]
 {
+"105
+[; ;main.c: 105:             _delay((unsigned long)((1)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "106
-[; ;main.c: 106:                 limpa_lcd();
-[e ( _limpa_lcd ..  ]
-"107
-[; ;main.c: 107:                 printf("Tempo 2: %ldms", counter);
-[e ( _printf , (. :s 5C _counter ]
+[; ;main.c: 106:             counter++;
+[e ++ _counter -> -> 1 `i `l ]
 "108
-[; ;main.c: 108:                 counter = 0;
-[e = _counter -> -> 0 `i `l ]
+[; ;main.c: 108:             if(PORTBbits.RB1 == 0x01){
+[e $ ! == -> . . _PORTBbits 0 1 `i -> 1 `i 372  ]
+{
 "109
-[; ;main.c: 109:                 break;
-[e $U 374  ]
+[; ;main.c: 109:                 pressedJ1 = 1;
+[e = _pressedJ1 -> 1 `i ]
 "110
-[; ;main.c: 110:             }
-}
-[e :U 376 ]
-"111
-[; ;main.c: 111:         }
+[; ;main.c: 110:                 timeJ1 = counter;
+[e = _timeJ1 _counter ]
+"112
+[; ;main.c: 112:                 PORTCbits.RC1 = 1;
+[e = . . _PORTCbits 0 1 -> -> 1 `i `uc ]
+"113
+[; ;main.c: 113:             }
 }
 [e :U 372 ]
-"94
-[; ;main.c: 94:         while(start_reset) {
-[e $ != _start_reset -> 0 `i 373  ]
-[e :U 374 ]
-"113
-[; ;main.c: 113:     }
+"115
+[; ;main.c: 115:             if(PORTBbits.RB2 == 0x01){
+[e $ ! == -> . . _PORTBbits 0 2 `i -> 1 `i 373  ]
+{
+"116
+[; ;main.c: 116:                 pressedJ2 = 1;
+[e = _pressedJ2 -> 1 `i ]
+"117
+[; ;main.c: 117:                 timeJ2 = counter;
+[e = _timeJ2 _counter ]
+"119
+[; ;main.c: 119:                 PORTCbits.RC2 = 1;
+[e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
+"120
+[; ;main.c: 120:             }
 }
-[e :U 366 ]
-[e $U 367  ]
-[e :U 368 ]
-"114
-[; ;main.c: 114: }
-[e :UE 365 ]
+[e :U 373 ]
+"122
+[; ;main.c: 122:             if(pressedJ1 == 1 && pressedJ2 == 1){
+[e $ ! && == _pressedJ1 -> 1 `i == _pressedJ2 -> 1 `i 374  ]
+{
+"123
+[; ;main.c: 123:                 limpa_lcd();
+[e ( _limpa_lcd ..  ]
+"124
+[; ;main.c: 124:                 caracter_inicio(1,1);
+[e ( _caracter_inicio (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+"125
+[; ;main.c: 125:                 printf("Tempo 1: %ldms", timeJ1);
+[e ( _printf , (. :s 4C _timeJ1 ]
+"126
+[; ;main.c: 126:                 caracter_inicio(2,1);
+[e ( _caracter_inicio (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
+"127
+[; ;main.c: 127:                 printf("Tempo 2: %ldms", timeJ2);
+[e ( _printf , (. :s 5C _timeJ2 ]
+"129
+[; ;main.c: 129:                 while(1) {
+[e :U 376 ]
+{
+"130
+[; ;main.c: 130:                     if(PORTBbits.RB0 == 0x01){
+[e $ ! == -> . . _PORTBbits 0 0 `i -> 1 `i 378  ]
+{
+"132
+[; ;main.c: 132:                         PORTCbits.RC0 = 0;
+[e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
+"133
+[; ;main.c: 133:                         PORTCbits.RC1 = 0;
+[e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
+"134
+[; ;main.c: 134:                         PORTCbits.RC2 = 0;
+[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
+"136
+[; ;main.c: 136:                         limpa_lcd();
+[e ( _limpa_lcd ..  ]
+"137
+[; ;main.c: 137:                         printf("Reiniciando...");
+[e ( _printf :s 6C ]
+"138
+[; ;main.c: 138:                         _delay((unsigned long)((1000)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"139
+[; ;main.c: 139:                         limpa_lcd();
+[e ( _limpa_lcd ..  ]
+"141
+[; ;main.c: 141:                         start_reset = 0;
+[e = _start_reset -> 0 `i ]
+"143
+[; ;main.c: 143:                         caracter_inicio(1,1);
+[e ( _caracter_inicio (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+"144
+[; ;main.c: 144:                         printf("Aperte para");
+[e ( _printf :s 7C ]
+"145
+[; ;main.c: 145:                         caracter_inicio(2,1);
+[e ( _caracter_inicio (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
+"146
+[; ;main.c: 146:                         printf("iniciar!!!");
+[e ( _printf :s 8C ]
+"148
+[; ;main.c: 148:                         break;
+[e $U 377  ]
+"149
+[; ;main.c: 149:                     }
+}
+[e :U 378 ]
+"150
+[; ;main.c: 150:                 }
+}
+[e :U 375 ]
+[e $U 376  ]
+[e :U 377 ]
+"151
+[; ;main.c: 151:                 break;
+[e $U 371  ]
+"152
+[; ;main.c: 152:             }
+}
+[e :U 374 ]
+"153
+[; ;main.c: 153:         }
+}
+[e :U 369 ]
+"104
+[; ;main.c: 104:         while(start_reset) {
+[e $ != _start_reset -> 0 `i 370  ]
+[e :U 371 ]
+"156
+[; ;main.c: 156:     }
+}
+[e :U 365 ]
+[e $U 366  ]
+[e :U 367 ]
+"157
+[; ;main.c: 157: }
+[e :UE 364 ]
 }
 [p f _printf 8388752 ]
 [a 5C 84 101 109 112 111 32 50 58 32 37 108 100 109 115 0 ]
 [a 4C 84 101 109 112 111 32 49 58 32 37 108 100 109 115 0 ]
-[a 1C 65 112 101 114 116 101 32 112 97 114 97 32 105 110 105 99 105 97 114 0 ]
-[a 3C 82 101 105 110 105 99 105 97 110 100 111 46 46 46 0 ]
-[a 2C 82 111 100 97 110 100 111 46 46 46 0 ]
+[a 1C 65 112 101 114 116 101 32 112 97 114 97 0 ]
+[a 7C 65 112 101 114 116 101 32 112 97 114 97 0 ]
+[a 6C 82 101 105 110 105 99 105 97 110 100 111 46 46 46 0 ]
+[a 3C 82 111 100 97 110 100 111 46 46 46 0 ]
+[a 2C 105 110 105 99 105 97 114 33 33 33 0 ]
+[a 8C 105 110 105 99 105 97 114 33 33 33 0 ]
